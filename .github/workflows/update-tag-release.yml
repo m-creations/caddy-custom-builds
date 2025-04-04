@@ -65,6 +65,8 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config commit.gpgsign false
+          git config push.gpgsign false
+          git config tag.gpgsign false
 
       - name: Commit and push changes
         run: |
