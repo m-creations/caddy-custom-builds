@@ -1,3 +1,8 @@
+This image is needed in the GitHub CI workflows and serves no other
+purpose as to check the available Caddy release version.
+
+----
+
 # Caddy Docker build with Cloudflare DNS and IPs modules
 
 [![Docker Hub](https://img.shields.io/badge/Docker%20Hub%20-%20serfriz%2Fcaddy--cloudflare%20-%20%230db7ed?style=flat&logo=docker)](https://hub.docker.com/r/serfriz/caddy-cloudflare)
