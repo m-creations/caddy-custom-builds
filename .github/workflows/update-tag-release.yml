@@ -81,8 +81,8 @@ jobs:
         
       - name: Create and push tag
         run: |
-          git tag -fs v${{ needs.metadata.outputs.version }} -m "Docker images built with Caddy v${{ needs.metadata.outputs.version }}"
-          git push --tags -f
+          git tag --no-sign -f v${{ needs.metadata.outputs.version }} -m "Docker images built with Caddy v${{ needs.metadata.outputs.version }}"
+          git push --no-sign --tags -f
 
   # Job to create a release
   release:
