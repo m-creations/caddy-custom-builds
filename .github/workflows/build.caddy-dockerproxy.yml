@@ -3,9 +3,9 @@ name: Build caddy-dockerproxy
 
 # Controls when the action will run
 on:
-  workflow_dispatch:  # allows to run the workflow manually from the Actions tab
+  workflow_dispatch: # allows to run the workflow manually from the Actions tab
   schedule:
-    - cron: '0 0 1 * *'  # runs at 00:00 on the first day of every month
+    - cron: "0 0 1 * *" # runs at 00:00 on the first day of every month
   push:
     branches: main
     paths:
@@ -14,7 +14,7 @@ on:
 # Environment variables available to all jobs and steps in this workflow
 env:
   DOCKER_BUILDKIT: 1
-  DOCKER_NAME: caddy-desec-geoip-coraza-dockerproxy
+  DOCKER_NAME: caddy-dockerproxy
   DOCKER_DESCRIPTION: "Caddy Docker build with deSEC DNS, GeoIP Filter, Coraza WAF and Docker Proxy modules"
 
 # Jobs to run once the workflow is triggered
