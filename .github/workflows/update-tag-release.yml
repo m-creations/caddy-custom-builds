@@ -45,11 +45,13 @@ jobs:
         uses: actions/checkout@v4
         with:
           ref: main
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
       - name: Replace Caddy version in all Dockerfiles
         run: |
           for caddy_build in $CADDY_BUILDS; do
-            echo sed -i "s/caddy:[0-9]\+\.[0-9]\+\.[0-9]\+/caddy:${{ needs.metadata.outputs.version }}/g" ./$caddy_build/Dockerfile
             sed -i "s/caddy:[0-9]\+\.[0-9]\+\.[0-9]\+/caddy:${{ needs.metadata.outputs.version }}/g" ./$caddy_build/Dockerfile
           done
 
@@ -61,14 +63,8 @@ jobs:
       #     git_commit_gpgsign: true
       #     git_tag_gpgsign: true
 
-      - name: Set up user info for git committing
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-
       - name: Commit and push changes
         run: |
-          git diff HEAD
           git add ./*/Dockerfile
           if [ "$(git diff HEAD)" ]
           then
