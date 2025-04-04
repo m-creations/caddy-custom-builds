@@ -49,6 +49,7 @@ jobs:
       - name: Replace Caddy version in all Dockerfiles
         run: |
           for caddy_build in $CADDY_BUILDS; do
+            echo sed -i "s/caddy:[0-9]\+\.[0-9]\+\.[0-9]\+/caddy:${{ needs.metadata.outputs.version }}/g" ./$caddy_build/Dockerfile
             sed -i "s/caddy:[0-9]\+\.[0-9]\+\.[0-9]\+/caddy:${{ needs.metadata.outputs.version }}/g" ./$caddy_build/Dockerfile
           done
 
@@ -62,6 +63,7 @@ jobs:
 
       - name: Commit and push changes
         run: |
+          git diff HEAD
           git add ./*/Dockerfile
           if [ "$(git diff HEAD)" ]
           then
