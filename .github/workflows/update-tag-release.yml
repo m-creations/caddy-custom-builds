@@ -61,6 +61,11 @@ jobs:
       #     git_commit_gpgsign: true
       #     git_tag_gpgsign: true
 
+      - name: Set up user info for git committing
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
       - name: Commit and push changes
         run: |
           git diff HEAD
