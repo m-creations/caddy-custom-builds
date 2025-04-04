@@ -1,3 +1,8 @@
+This is the original image with these additional modules:
+
+- [**layer4**](https://caddyserver.com/docs/modules/layer4.handlers.proxy): Matt Holt's [Caddy app for proxying OSI layer 4 (TCP/UDP) connections](https://github.com/mholt/caddy-l4)
+- [**Rate Limit**](https://github.com/serfriz/caddy-custom-builds?tab=readme-ov-file#rate-limit): implements both internal and distributed HTTP rate limiting | [mholt/caddy-ratelimit](https://github.com/mholt/caddy-ratelimit)
+
 # Caddy Docker build with deSEC DNS, GeoIP Filter, Coraza WAF and Docker Proxy modules
 
 [![Docker Hub](https://img.shields.io/badge/Docker%20Hub%20-%20serfriz%2Fcaddy--desec--geoip--coraza--dockerproxy%20-%20%230db7ed?style=flat&logo=docker)](https://hub.docker.com/r/serfriz/caddy-desec-geoip-coraza-dockerproxy)
