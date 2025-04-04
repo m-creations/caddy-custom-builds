@@ -1,5 +1,5 @@
 # Workflow to build and push a Docker image to Docker Hub, GitHub and Quay Container Registries
-name: Build caddy-desec-geoip-coraza-dockerproxy
+name: Build caddy-dockerproxy
 
 # Controls when the action will run
 on:
@@ -9,7 +9,7 @@ on:
   push:
     branches: main
     paths:
-      - caddy-desec-geoip-coraza-dockerproxy/Dockerfile
+      - caddy-dockerproxy/Dockerfile
 
 # Environment variables available to all jobs and steps in this workflow
 env:
@@ -28,7 +28,7 @@ jobs:
       version: ${{ steps.version.outputs.version }}
       labels: ${{ steps.metadata.outputs.labels }}
       tags: ${{ steps.metadata.outputs.tags }}
-      platforms: linux/amd64,linux/arm64,linux/ppc64le,linux/s390x,linux/arm/v7,linux/arm/v6
+      platforms: linux/amd64,linux/arm64
 
     steps:
       - name: Checkout repository

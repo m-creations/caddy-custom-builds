@@ -9,7 +9,7 @@ updates:
       - "darabi"
   # Check for Docker image updates
   - package-ecosystem: "docker"
-    directory: "/caddy-builder"
+    directory: "/caddy"
     schedule:
       interval: "daily"
     assignees:
