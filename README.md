@@ -1,3 +1,9 @@
+Forked from https://github.com/serfriz/caddy-custom-builds/ to build some specific images.
+
+Many thanks to @serfriz and all contributors of that repo!
+
+----
+
 # Caddy Docker Custom Builds
 [![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/serfriz/caddy-custom-builds?label=Release)](https://github.com/serfriz/caddy-custom-builds/releases)
 [![GitHub build status](https://img.shields.io/github/actions/workflow/status/serfriz/caddy-custom-builds/update-tag-release.yml?label=Auto-update)](https://github.com/serfriz/caddy-custom-builds/actions/workflows/update-tag-release.yml)
