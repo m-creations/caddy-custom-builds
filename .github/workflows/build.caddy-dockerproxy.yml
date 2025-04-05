@@ -55,6 +55,7 @@ jobs:
           labels: |
             org.opencontainers.image.title=${{ env.DOCKER_NAME }}
             org.opencontainers.image.description=${{ env.DOCKER_DESCRIPTION }}
+            org.opencontainers.image.source=${{ github.server_url }}/${{ github.repository }}
 
   # Job to build and publish Docker image
   build:
@@ -102,7 +103,6 @@ jobs:
           file: ./${{ env.DOCKER_NAME }}/Dockerfile
           push: true
           provenance: false
-          visibility: public
           tags: ${{ needs.metadata.outputs.tags }}
           labels: ${{ needs.metadata.outputs.labels }}
           platforms: ${{ needs.metadata.outputs.platforms }}
