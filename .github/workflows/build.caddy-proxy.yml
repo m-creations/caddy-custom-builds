@@ -1,5 +1,5 @@
 # Workflow to build and push a Docker image to Docker Hub, GitHub and Quay Container Registries
-name: Build caddy-dockerproxy
+name: Build caddy-proxy
 
 # Controls when the action will run
 on:
@@ -9,13 +9,13 @@ on:
   push:
     branches: main
     paths:
-      - caddy-dockerproxy/Dockerfile
+      - caddy-proxy/Dockerfile
 
 # Environment variables available to all jobs and steps in this workflow
 env:
   DOCKER_BUILDKIT: 1
-  DOCKER_NAME: caddy-dockerproxy
-  DOCKER_DESCRIPTION: "Caddy Docker build with deSEC DNS, GeoIP Filter, Coraza WAF and Docker Proxy modules"
+  DOCKER_NAME: caddy-proxy
+  DOCKER_DESCRIPTION: "Caddy Docker build with deSEC DNS, GeoIP Filter, Coraza WAF, IP Ban Middleware and Docker Proxy modules"
 
 # Jobs to run once the workflow is triggered
 jobs:
