@@ -2,6 +2,7 @@
 FROM caddy:2.9.1-builder AS builder
 
 RUN xcaddy build \
+    --with github.com/caddy-dns/hetzner \
     --with github.com/caddy-dns/desec \
     --with github.com/corazawaf/coraza-caddy/v2 \
     --with github.com/fabriziosalmi/caddy-mib \

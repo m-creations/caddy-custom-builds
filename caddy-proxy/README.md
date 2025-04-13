@@ -4,6 +4,8 @@ This is the original image with these additional modules:
 - [**Rate Limit**](https://github.com/serfriz/caddy-custom-builds?tab=readme-ov-file#rate-limit): implements both internal and distributed HTTP rate limiting | [mholt/caddy-ratelimit](https://github.com/mholt/caddy-ratelimit)
 - [**Caddy Security**](https://github.com/serfriz/caddy-custom-builds?tab=readme-ov-file#caddy-security): to add different authentication methods including MFA/2FA support | [greenpau/caddy-security](https://github.com/greenpau/caddy-security)
 - [**Middleware IP Ban**](https://github.com/fabriziosalmi/caddy-mib): add fail2ban like functionality based on downstream server HTTP errors
+- [**deSEC DNS**](https://caddyserver.com/docs/modules/dns.providers.desec): modify DNS records at DNS Provider [deSEC](https://desec.io): [caddy-dns/desec](https://github.com/caddy-dns/desec)
+- [**Hetzner DNS**](https://caddyserver.com/docs/modules/dns.providers.hetzner): modify DNS records at [Hetzner](https://www.hetzner.com/dns-console/): [caddy-dns/hetzner](https://github.com/caddy-dns/hetzner)
 
 # Caddy Docker build with deSEC DNS, GeoIP Filter, Coraza WAF and Docker Proxy modules
 
